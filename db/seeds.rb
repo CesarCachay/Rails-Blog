@@ -8,7 +8,7 @@ gabriel_user = User.create(
   first_name: 'Gabriel',
   last_name: 'García Marquez',
   birthday: '06-03-1927',
-  private_email: true,
+  private_email: false,
   email: 'gabo@gmail.com'
 )
 
@@ -16,7 +16,7 @@ julio_user = User.create(
   first_name: 'Julio',
   last_name: 'Ribeyro',
   birthday: '31-08-1929',
-  private_email: true,
+  private_email: false,
   email: 'julio@gmail.com'
 )
 
@@ -24,7 +24,7 @@ ernesto_user = User.create(
   first_name: 'Ernesto',
   last_name: 'Sabato',
   birthday: '24-06-191',
-  private_email: true,
+  private_email: false,
   email: 'ernesto@sabato.com'
 )
 

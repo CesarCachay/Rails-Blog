@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   before_action :set_user, except: [:index, :new, :create]
 
   def index
-    @users = User.includes(:posts)
+    @users = User.includes(:posts).where(private_email: :true)
   end
 
   def show

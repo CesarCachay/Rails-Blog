@@ -32,4 +32,5 @@ class User < ApplicationRecord
   def comment(body, post)
     post.comments.create(user: self, body: body)
   end
+
 end
