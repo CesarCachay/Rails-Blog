@@ -28,6 +28,22 @@ ernesto_user = User.create(
   email: 'ernesto@sabato.com'
 )
 
+cesar_user = User.create(
+  first_name: 'Cesar',
+  last_name: 'Cachay',
+  birthday: '06-07-1996',
+  private_email: false,
+  email: 'cesarcachay1996@gmail.com'
+)
+
+admin_user = User.create(
+  first_name: 'Codeable',
+  last_name: 'Admin',
+  birthday: '06-06-2015',
+  private_email: true,
+  email: 'codeable@gmail.com'
+)
+
 julio_user.follow(gabriel_user)
 ernesto_user.follow(gabriel_user)
 ernesto_user.follow(julio_user)
@@ -48,3 +64,11 @@ juliomedium1 = Medium.create(name: 'image1.jpg')
 juliomedium2 = Medium.create(name: 'image2.jpg')
 juliopost1 = julio_user.publish('my first post', juliomedium1, juliomedium2)
 gabriel_user.like(juliopost1)
+
+cesarmedium1 = Medium.create(name: 'image1.jpg')
+cesarpost1 = cesar_user.publish('Developing my title application', cesarmedium1)
+gabriel_user.like(cesarpost1)
+ernesto_user.like(cesarpost1)
+julio_user.like(cesarpost1)
+julio_user.comment('You can do it!', cesarpost1)
+cesar_user.comment('Thank you!', cesarpost1)
